@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+body {
+  min-height: 4000px;
+}
+
+@font-face {
+  font-family: "Geotrica-Regular";
+  src:
+    local("Geotrica"),
+    url(assets/fonts/Geotrica.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Geotrica-Bold";
+  src:
+    local("Geotrica-Bold"),
+    url(assets/fonts/Geotrica-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Geotrica-Italic";
+  src:
+    local("Geotrica-Italic"),
+    url(assets/fonts/Geotrica-Italic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Geotrica-Bold-Italic";
+  src:
+    local("Geotrica-Bold-Italic"),
+    url(assets/fonts/Geotrica-Bold-Italic.ttf) format("truetype");
+}
