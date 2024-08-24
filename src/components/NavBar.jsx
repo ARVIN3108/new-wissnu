@@ -8,7 +8,7 @@ export default function NavBar() {
           className="flex items-center space-x-3 hover:cursor-pointer rtl:space-x-reverse"
         >
           <img
-            src="/new-wissnu/wissnu-300.png"
+            src="./wissnu-300.png"
             className="h-11"
             alt="WisSNU Logo"
           />
