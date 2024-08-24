@@ -7,9 +7,9 @@ html {
   transform: translate3d(0, 0, 0);
 }
 
-body {
+/* body {
   min-height: 4000px;
-}
+} */
 
 @font-face {
   font-family: "Geotrica-Regular";

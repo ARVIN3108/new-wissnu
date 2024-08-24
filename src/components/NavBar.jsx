@@ -1,17 +1,17 @@
 export default function NavBar() {
   const menu = ["Beranda", "Tentang WisSNU", "BPH", "Kementerian"];
+  let value = true;
   return (
-    <nav className="sticky start-0 top-0 z-20 mt-[-13.55rem] w-full bg-transparent">
+    <nav
+      className="mta-[-13.55rem] sticky start-0 top-0 z-20 w-full rounded-b-lg bg-black/40"
+      id="main-navbar"
+    >
       <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
         <a
           onClick={() => (window.location.href = "#")}
           className="flex items-center space-x-3 hover:cursor-pointer rtl:space-x-reverse"
         >
-          <img
-            src="./wissnu-300.png"
-            className="h-11"
-            alt="WisSNU Logo"
-          />
+          <img src="./wissnu-300.png" className="h-11" alt="WisSNU Logo" />
           <span className="self-center whitespace-nowrap font-geotricaBold text-2xl font-semibold text-white">
             WisSNU
           </span>
@@ -30,6 +30,17 @@ export default function NavBar() {
             className="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600 md:hidden"
             aria-controls="navbar-sticky"
             aria-expanded="false"
+            onClick={() => {
+              document.getElementById("main-navbar");
+              const navbar = document.getElementById("main-navbar");
+              if (value) {
+                navbar.style.marginTop = "-13.55rem";
+                value = false;
+              } else {
+                navbar.style.marginTop = "0rem";
+                value = true;
+              }
+            }}
           >
             <span className="sr-only">Open main menu</span>
             <svg
@@ -53,7 +64,7 @@ export default function NavBar() {
           className="sticky hidden w-full items-center justify-between md:order-1 md:flex md:w-auto"
           id="navbar-sticky"
         >
-          <ul className="mt-4 flex flex-col rounded-lg border-2 border-gray-100 bg-black bg-opacity-25 p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-transparent md:p-0 rtl:space-x-reverse">
+          <ul className="mt-4 flex flex-col rounded-lg border-2 border-gray-100 bg-black/25 p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-transparent md:p-0 rtl:space-x-reverse">
             {menu.map((name, index) => {
               return (
                 <li key={index}>
