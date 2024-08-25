@@ -1,4 +1,6 @@
 import ManWomenBtn from "../components/ManWomenBtn";
+import aniesPNG from "../assets/people/anies-removebg.png";
+import fasyaPNG from "../assets/people/fasya-canva2.png";
 
 export default function PresidentPage() {
   return (
@@ -21,20 +23,12 @@ export default function PresidentPage() {
             <p>Mifa: Afia</p>
           </div>
           <div className="col-span-4">
-            <img
-              src="/new-wissnu/assets/people/anies-removebg.png"
-              alt="ARVIN3108"
-              className="h-auto w-full"
-            />
+            <img src={aniesPNG} alt="ARVIN3108" className="h-auto w-full" />
           </div>
         </div>
         <div className="ml-auto grid grid-cols-12 items-center text-white">
           <div className="col-span-4">
-            <img
-              src="/new-wissnu/assets/people/fasya-canva2.png"
-              alt="Vinia"
-              className="h-auto w-3/4"
-            />
+            <img src={fasyaPNG} alt="Vinia" className="h-auto w-3/4" />
           </div>
           <div className="col-span-8">
             <h3 className="text-4xl">Fasya Arafat</h3>
