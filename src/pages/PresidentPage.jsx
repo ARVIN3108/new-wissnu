@@ -1,6 +1,6 @@
 import ManWomenBtn from "../components/ManWomenBtn";
-import aniesPNG from "../assets/people/anies-removebg.png";
-import fasyaPNG from "../assets/people/fasya-canva2.png";
+import aniesPNG from "../assets/people/anies.png";
+import fasyaPNG from "../assets/people/fasya.png";
 
 export default function PresidentPage() {
   return (
