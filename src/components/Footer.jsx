@@ -75,7 +75,7 @@ export default function Footer() {
         </div>
 
         <p className="mt-12 text-center text-sm text-gray-300 lg:text-right">
-          Copyright &copy; 2024 WIsSNU Reformation Cabinet | MBI-AU Pacet.
+          Copyright &copy; 2024-2025 WIsSNU Reformation Cabinet | MBI-AU Pacet.
           Created by ARVIN D.T. All rights reserved.
         </p>
       </div>
