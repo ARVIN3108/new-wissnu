@@ -22,7 +22,7 @@ export default function PresidentPage() {
           </div>
           <div className="col-span-4">
             <img
-              src="./src/assets/people/anies-removebg.png"
+              src="/new-wissnu/assets/people/anies-removebg.png"
               alt="ARVIN3108"
               className="h-auto w-full"
             />
@@ -31,7 +31,7 @@ export default function PresidentPage() {
         <div className="ml-auto grid grid-cols-12 items-center text-white">
           <div className="col-span-4">
             <img
-              src="./src/assets/people/fasya-canva2.png"
+              src="/new-wissnu/assets/people/fasya-canva2.png"
               alt="Vinia"
               className="h-auto w-3/4"
             />
