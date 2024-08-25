@@ -1,9 +1,26 @@
+import { useEffect } from "react";
 export default function NavBar() {
   const menu = ["Beranda", "Tentang WisSNU", "BPH", "Kementerian"];
-  let value = true;
+
+  useEffect(() => {
+    const navbar = document.getElementById("main-navbar");
+    if (navbar) {
+      navbar.setAttribute("opened", "false");
+      window.addEventListener("resize", () => {
+        if (navbar.getAttribute("opened") == "true") {
+          if (window.innerWidth > 768) {
+            navbar.style.marginTop = "0rem";
+          } else {
+            navbar.style.marginTop = "-13.55rem";
+          }
+        }
+      });
+    }
+  }, []);
+
   return (
     <nav
-      className="mta-[-13.55rem] sticky start-0 top-0 z-20 w-full rounded-b-lg bg-black/40"
+      className="sticky start-0 top-0 z-20 w-full rounded-b-lg bg-black/40"
       id="main-navbar"
     >
       <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
@@ -31,14 +48,13 @@ export default function NavBar() {
             aria-controls="navbar-sticky"
             aria-expanded="false"
             onClick={() => {
-              document.getElementById("main-navbar");
               const navbar = document.getElementById("main-navbar");
-              if (value) {
+              if (navbar.getAttribute("opened") == "false") {
                 navbar.style.marginTop = "-13.55rem";
-                value = false;
+                navbar.setAttribute("opened", "true");
               } else {
                 navbar.style.marginTop = "0rem";
-                value = true;
+                navbar.setAttribute("opened", "false");
               }
             }}
           >

@@ -1,6 +1,6 @@
 export default function HomePage() {
   return (
-    <div className="relative mt-[-4.72rem] min-h-screen align-middle before:absolute before:left-0 before:top-0 before:z-[-1] before:h-full before:w-full before:bg-gray-700 before:bg-[url(assets/bg2.jpg)] before:bg-cover before:bg-center before:bg-blend-multiply">
+    <div className="relative mt-[-4.73rem] min-h-screen align-middle before:absolute before:left-0 before:top-0 before:z-[-1] before:h-full before:w-full before:bg-gray-700 before:bg-[url(assets/bg2.jpg)] before:bg-cover before:bg-center before:bg-blend-multiply">
       <div className="mx-auto max-w-screen-xl px-4 py-28 text-center lg:py-36">
         <h1 className="mb-4 font-geotricaBold text-6xl font-extrabold leading-none tracking-tight text-white md:text-7xl lg:text-8xl">
           WisSNU
