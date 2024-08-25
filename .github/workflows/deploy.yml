@@ -4,6 +4,14 @@ on:
   push:
     branches:
       - master
+    paths:
+      - "**"
+      - "!*.yml"
+      - "!*.md"
+      - "!.github/**"
+      - "!.gitignore"
+      - "!.eslint.config.js"
+      - "!.prettierrc"
 
 jobs:
   build:
