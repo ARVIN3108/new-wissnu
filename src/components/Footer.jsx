@@ -29,7 +29,7 @@ export default function Footer() {
             <div className="flex justify-center text-teal-600 lg:justify-start">
               <img src="./wissnu-300.png" className="h-11" alt="WisSNU Logo" />
               <span className="self-center whitespace-nowrap px-3 font-geotricaBold text-2xl font-semibold text-white">
-                WisSNU
+                WIsSNU
               </span>
             </div>
 

@@ -1,7 +1,5 @@
 import { useEffect } from "react";
 export default function NavBar() {
-  const menu = ["Beranda", "Tentang WisSNU", "BPH", "Kementerian"];
-
   useEffect(() => {
     const navbar = document.getElementById("main-navbar");
     if (navbar) {
@@ -30,7 +28,7 @@ export default function NavBar() {
         >
           <img src="./wissnu-300.png" className="h-11" alt="WisSNU Logo" />
           <span className="self-center whitespace-nowrap font-geotricaBold text-2xl font-semibold text-white">
-            WisSNU
+            WIsSNU
           </span>
         </a>
         <div className="flex space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse">
@@ -81,15 +79,32 @@ export default function NavBar() {
           id="navbar-sticky"
         >
           <ul className="mt-4 flex flex-col rounded-lg border-2 border-gray-100 bg-black/25 p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-transparent md:p-0 rtl:space-x-reverse">
-            {menu.map((name, index) => {
-              return (
-                <li key={index}>
-                  <a className="block rounded px-3 py-2 font-geotricaRegular text-[1.05rem] text-white hover:cursor-pointer hover:bg-blue-700 dark:hover:text-white md:p-0 md:hover:border-none md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent">
-                    {name}
-                  </a>
-                </li>
-              );
-            })}
+            <li>
+              <a
+                className="block rounded px-3 py-2 font-geotricaRegular text-[1.05rem] text-white hover:cursor-pointer hover:bg-blue-700 dark:hover:text-white md:p-0 md:hover:border-none md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent"
+                onClick={() => (window.location.href = "#")}
+              >
+                Beranda
+              </a>
+            </li>
+            <li>
+              <a
+                className="block rounded px-3 py-2 font-geotricaRegular text-[1.05rem] text-white hover:cursor-pointer hover:bg-blue-700 dark:hover:text-white md:p-0 md:hover:border-none md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent"
+                onClick={() => (window.location.href = "#president")}
+              >
+                Presiden
+              </a>
+            </li>
+            <li>
+              <a className="block rounded px-3 py-2 font-geotricaRegular text-[1.05rem] text-white hover:cursor-pointer hover:bg-blue-700 dark:hover:text-white md:p-0 md:hover:border-none md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent">
+                BPH
+              </a>
+            </li>
+            <li>
+              <a className="block rounded px-3 py-2 font-geotricaRegular text-[1.05rem] text-white hover:cursor-pointer hover:bg-blue-700 dark:hover:text-white md:p-0 md:hover:border-none md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent">
+                Kementrian
+              </a>
+            </li>
           </ul>
         </div>
       </div>
