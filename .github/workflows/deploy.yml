@@ -12,6 +12,7 @@ on:
       - "!.gitignore"
       - "!.eslint.config.js"
       - "!.prettierrc"
+      - "!previews/**"
 
 jobs:
   build:
