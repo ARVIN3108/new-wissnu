@@ -6,11 +6,8 @@ export default function NavBar() {
       navbar.setAttribute("opened", "false");
       window.addEventListener("resize", () => {
         if (navbar.getAttribute("opened") == "true") {
-          if (window.innerWidth > 768) {
-            navbar.style.marginTop = "0rem";
-          } else {
-            navbar.style.marginTop = "-13.55rem";
-          }
+          if (window.innerWidth > 768) navbar.style.marginTop = "0rem";
+          else navbar.style.marginTop = "-13.55rem";
         }
       });
     }
@@ -97,7 +94,7 @@ export default function NavBar() {
             </li>
             <li>
               <a className="block rounded px-3 py-2 font-geotricaRegular text-[1.05rem] text-white hover:cursor-pointer hover:bg-blue-700 dark:hover:text-white md:p-0 md:hover:border-none md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent">
-                BPH
+                Menteri Koordinator
               </a>
             </li>
             <li>
@@ -105,6 +102,132 @@ export default function NavBar() {
                 Kementrian
               </a>
             </li>
+            {/* <li>
+              <button
+                id="dropdownNavbarLink"
+                data-dropdown-toggle="dropdownNavbar"
+                className="flex w-full items-center justify-between px-3 py-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 dark:focus:text-white md:w-auto md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500"
+              >
+                Dropdown{" "}
+                <svg
+                  className="ms-2.5 h-2.5 w-2.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
+              <div
+                id="dropdownNavbar"
+                className="z-10 hidden w-44 divide-y divide-gray-100 rounded-lg bg-white font-normal shadow dark:divide-gray-600 dark:bg-gray-700"
+              >
+                <ul
+                  className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                  aria-labelledby="dropdownLargeButton"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >
+                      Dashboard
+                    </a>
+                  </li>
+                  <li aria-labelledby="dropdownNavbarLink">
+                    <button
+                      id="doubleDropdownButton"
+                      data-dropdown-toggle="doubleDropdown"
+                      data-dropdown-placement="right-start"
+                      type="button"
+                      className="flex w-full items-center justify-between px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >
+                      Dropdown
+                      <svg
+                        className="ms-2.5 h-2.5 w-2.5"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                      >
+                        <path
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="m1 1 4 4 4-4"
+                        />
+                      </svg>
+                    </button>
+                    <div
+                      id="doubleDropdown"
+                      className="z-10 hidden w-44 divide-y divide-gray-100 rounded-lg bg-white shadow dark:bg-gray-700"
+                    >
+                      <ul
+                        className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                        aria-labelledby="doubleDropdownButton"
+                      >
+                        <li>
+                          <a
+                            href="#"
+                            className="block px-4 py-2 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >
+                            Overview
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block px-4 py-2 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >
+                            My downloads
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block px-4 py-2 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >
+                            Billing
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block px-4 py-2 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >
+                            Rewards
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >
+                      Earnings
+                    </a>
+                  </li>
+                </ul>
+                <div className="py-1">
+                  <a
+                    href="#"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >
+                    Sign out
+                  </a>
+                </div>
+              </div>
+            </li> */}
           </ul>
         </div>
       </div>

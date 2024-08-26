@@ -16,9 +16,9 @@ export default function PresidentPage() {
       <div className="couple grid grid-cols-1 font-geotricaRegular lg:grid-cols-2">
         <div className="grid grid-cols-12 items-center text-white">
           <div className="col-span-8 pr-8 text-right lg:pr-16">
-            <h3 className="text-4xl">Anies Syaroni</h3>
+            <h3 className="text-4xl">Anies Sya{"'"}roni</h3>
             <h4 className="text-xl">Presiden WIsSNU</h4>
-            <p>Asal: Lorem</p>
+            <p>Asal: Bali</p>
             <p>Mafa: Ipsum</p>
             <p>Mifa: Afia</p>
           </div>
