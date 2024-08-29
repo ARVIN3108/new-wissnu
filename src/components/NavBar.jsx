@@ -1,15 +1,23 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 export default function NavBar() {
+  const [isMainDropdown, setMainDropdown] = useState(false);
+  const [isMenko1Dropdown, setMenko1Dropdown] = useState(false);
+  const [isMenko2Dropdown, setMenko2Dropdown] = useState(false);
+  const [isMenko3Dropdown, setMenko3Dropdown] = useState(false);
   useEffect(() => {
     const navbar = document.getElementById("main-navbar");
     if (navbar) {
+      const updateMargin = () => {
+        navbar.style.marginTop =
+          navbar.getAttribute("opened") === "true" && window.innerWidth <= 768
+            ? "-13.55rem"
+            : "0rem";
+      };
+
       navbar.setAttribute("opened", "false");
-      window.addEventListener("resize", () => {
-        if (navbar.getAttribute("opened") == "true") {
-          if (window.innerWidth > 768) navbar.style.marginTop = "0rem";
-          else navbar.style.marginTop = "-13.55rem";
-        }
-      });
+      window.addEventListener("resize", updateMargin);
+
+      return () => window.removeEventListener("resize", updateMargin);
     }
   }, []);
 
@@ -44,13 +52,9 @@ export default function NavBar() {
             aria-expanded="false"
             onClick={() => {
               const navbar = document.getElementById("main-navbar");
-              if (navbar.getAttribute("opened") == "false") {
-                navbar.style.marginTop = "-13.55rem";
-                navbar.setAttribute("opened", "true");
-              } else {
-                navbar.style.marginTop = "0rem";
-                navbar.setAttribute("opened", "false");
-              }
+              const isOpen = navbar.getAttribute("opened") === "true";
+              navbar.setAttribute("opened", isOpen ? "false" : "true");
+              navbar.style.marginTop = isOpen ? "0rem" : "-13.55rem";
             }}
           >
             <span className="sr-only">Open main menu</span>
@@ -78,39 +82,32 @@ export default function NavBar() {
           <ul className="mt-4 flex flex-col rounded-lg border-2 border-gray-100 bg-black/25 p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-transparent md:p-0 rtl:space-x-reverse">
             <li>
               <a
-                className="block rounded px-3 py-2 font-geotricaRegular text-[1.05rem] text-white hover:cursor-pointer hover:bg-blue-700 dark:hover:text-white md:p-0 md:hover:border-none md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent"
+                className="block rounded px-3 py-2 font-geotricaRegular text-[1.05rem] text-white hover:cursor-pointer hover:bg-blue-700 md:p-0 md:hover:border-none md:hover:bg-transparent md:hover:text-blue-500"
                 onClick={() => (window.location.href = "#")}
               >
                 Beranda
               </a>
             </li>
             <li>
-              <a
-                className="block rounded px-3 py-2 font-geotricaRegular text-[1.05rem] text-white hover:cursor-pointer hover:bg-blue-700 dark:hover:text-white md:p-0 md:hover:border-none md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent"
-                onClick={() => (window.location.href = "#president")}
-              >
-                Presiden
+              <a className="block rounded px-3 py-2 font-geotricaRegular text-[1.05rem] text-white hover:cursor-pointer hover:bg-blue-700 md:p-0 md:hover:border-none md:hover:bg-transparent md:hover:text-blue-500">
+                MSDP
               </a>
             </li>
             <li>
-              <a className="block rounded px-3 py-2 font-geotricaRegular text-[1.05rem] text-white hover:cursor-pointer hover:bg-blue-700 dark:hover:text-white md:p-0 md:hover:border-none md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent">
-                Menteri Koordinator
+              <a className="block rounded px-3 py-2 font-geotricaRegular text-[1.05rem] text-white hover:cursor-pointer hover:bg-blue-700 md:p-0 md:hover:border-none md:hover:bg-transparent md:hover:text-blue-500">
+                Berita
               </a>
             </li>
             <li>
-              <a className="block rounded px-3 py-2 font-geotricaRegular text-[1.05rem] text-white hover:cursor-pointer hover:bg-blue-700 dark:hover:text-white md:p-0 md:hover:border-none md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent">
-                Kementrian
-              </a>
-            </li>
-            {/* <li>
               <button
                 id="dropdownNavbarLink"
                 data-dropdown-toggle="dropdownNavbar"
-                className="flex w-full items-center justify-between px-3 py-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 dark:focus:text-white md:w-auto md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500"
+                className="flex w-full items-center justify-between rounded px-3 py-2 font-geotricaRegular text-[1.05rem] text-white hover:bg-blue-700 md:w-auto md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-500"
+                onClick={() => setMainDropdown(!isMainDropdown)}
               >
-                Dropdown{" "}
+                Kementerian
                 <svg
-                  className="ms-2.5 h-2.5 w-2.5"
+                  className={`ms-2.5 h-2.5 w-2.5 transition-transform duration-300 ${isMainDropdown ? "rotate-180" : ""}`}
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -127,31 +124,24 @@ export default function NavBar() {
               </button>
               <div
                 id="dropdownNavbar"
-                className="z-10 hidden w-44 divide-y divide-gray-100 rounded-lg bg-white font-normal shadow dark:divide-gray-600 dark:bg-gray-700"
+                className="z-10 hidden w-52 divide-y divide-gray-100 rounded-lg bg-white font-normal shadow"
               >
                 <ul
-                  className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                  className="py-2 text-sm text-gray-700"
                   aria-labelledby="dropdownLargeButton"
                 >
-                  <li>
-                    <a
-                      href="#"
-                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                    >
-                      Dashboard
-                    </a>
-                  </li>
                   <li aria-labelledby="dropdownNavbarLink">
                     <button
-                      id="doubleDropdownButton"
-                      data-dropdown-toggle="doubleDropdown"
+                      id="menkoAkademikDropdownButton"
+                      data-dropdown-toggle="menkoAkademikDropdown"
                       data-dropdown-placement="right-start"
                       type="button"
-                      className="flex w-full items-center justify-between px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      className="flex w-full items-center justify-between px-4 py-2 hover:bg-gray-100"
+                      onClick={() => setMenko1Dropdown(!isMenko1Dropdown)}
                     >
-                      Dropdown
+                      Menko Akademik
                       <svg
-                        className="ms-2.5 h-2.5 w-2.5"
+                        className={`ms-2.5 h-2.5 w-2.5 transition-transform duration-300 ${isMenko1Dropdown ? "rotate-90" : "-rotate-90"}`}
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -167,67 +157,133 @@ export default function NavBar() {
                       </svg>
                     </button>
                     <div
-                      id="doubleDropdown"
-                      className="z-10 hidden w-44 divide-y divide-gray-100 rounded-lg bg-white shadow dark:bg-gray-700"
+                      id="menkoAkademikDropdown"
+                      className="z-10 hidden w-44 divide-y divide-gray-100 rounded-lg bg-white shadow"
                     >
                       <ul
-                        className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                        className="py-2 text-sm text-gray-700"
                         aria-labelledby="doubleDropdownButton"
                       >
                         <li>
                           <a
                             href="#"
-                            className="block px-4 py-2 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white"
+                            className="block px-4 py-2 hover:bg-gray-100"
                           >
-                            Overview
+                            Kemenderistek
                           </a>
                         </li>
                         <li>
                           <a
                             href="#"
-                            className="block px-4 py-2 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white"
+                            className="block px-4 py-2 hover:bg-gray-100"
                           >
-                            My downloads
+                            Kemenkominfo
                           </a>
                         </li>
                         <li>
                           <a
                             href="#"
-                            className="block px-4 py-2 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white"
+                            className="block px-4 py-2 hover:bg-gray-100"
                           >
-                            Billing
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="#"
-                            className="block px-4 py-2 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white"
-                          >
-                            Rewards
+                            Kemenkes
                           </a>
                         </li>
                       </ul>
                     </div>
                   </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  <li aria-labelledby="dropdownNavbarLink">
+                    <button
+                      id="menkoPengembanganDropdownButton"
+                      data-dropdown-toggle="menkoPengambanganDropdown"
+                      data-dropdown-placement="right-start"
+                      type="button"
+                      className="flex w-full items-center justify-between px-4 py-2 hover:bg-gray-100"
+                      onClick={() => setMenko2Dropdown(!isMenko2Dropdown)}
                     >
-                      Earnings
-                    </a>
+                      Menko Pengembangan
+                      <svg
+                        className={`ms-2.5 h-2.5 w-2.5 transition-transform duration-300 ${isMenko2Dropdown ? "rotate-90" : "-rotate-90"}`}
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                      >
+                        <path
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="m1 1 4 4 4-4"
+                        />
+                      </svg>
+                    </button>
+                    <div
+                      id="menkoPengambanganDropdown"
+                      className="z-10 hidden w-44 divide-y divide-gray-100 rounded-lg bg-white shadow"
+                    >
+                      <ul
+                        className="py-2 text-sm text-gray-700"
+                        aria-labelledby="doubleDropdownButton"
+                      >
+                        <li>
+                          <a
+                            href="#"
+                            className="block px-4 py-2 hover:bg-gray-100"
+                          >
+                            Kemenraga
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li aria-labelledby="dropdownNavbarLink">
+                    <button
+                      id="menko3DropdownButton"
+                      data-dropdown-toggle="menko3Dropdown"
+                      data-dropdown-placement="right-start"
+                      type="button"
+                      className="flex w-full items-center justify-between px-4 py-2 hover:bg-gray-100"
+                      onClick={() => setMenko3Dropdown(!isMenko3Dropdown)}
+                    >
+                      Menko 3
+                      <svg
+                        className={`ms-2.5 h-2.5 w-2.5 transition-transform duration-300 ${isMenko3Dropdown ? "rotate-90" : "-rotate-90"}`}
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                      >
+                        <path
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="m1 1 4 4 4-4"
+                        />
+                      </svg>
+                    </button>
+                    <div
+                      id="menko3Dropdown"
+                      className="z-10 hidden w-44 divide-y divide-gray-100 rounded-lg bg-white shadow"
+                    >
+                      <ul
+                        className="py-2 text-sm text-gray-700"
+                        aria-labelledby="doubleDropdownButton"
+                      >
+                        <li>
+                          <a
+                            href="#"
+                            className="block px-4 py-2 hover:bg-gray-100"
+                          >
+                            Kemenbud
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
                   </li>
                 </ul>
-                <div className="py-1">
-                  <a
-                    href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white"
-                  >
-                    Sign out
-                  </a>
-                </div>
               </div>
-            </li> */}
+            </li>
           </ul>
         </div>
       </div>

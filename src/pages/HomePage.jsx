@@ -5,12 +5,14 @@ export default function HomePage() {
         <h1 className="mb-2 font-geotricaBold text-6xl font-extrabold leading-none tracking-tight text-white md:text-7xl lg:text-8xl">
           WIsSNU
         </h1>
-        <p className="mb-5 font-geotricaRegular text-4xl font-normal text-gray-300 sm:px-16 lg:px-48 lg:text-5xl">
+        <p className="mb-8 font-geotricaRegular text-4xl font-normal text-gray-300 sm:px-16 lg:px-48 lg:text-5xl">
           Wahana Inspirasi Santri Nurul Ummah
         </p>
-        <p className="mb-8 font-geotricaRegular text-3xl text-white lg:text-4xl">
-          Kabinet: Reformasi
-        </p>
+        <div className="mb-12">
+          <a className="rounded px-4 py-2 font-geotricaRegular text-3xl text-white ring-2 ring-white ring-offset-1 lg:text-4xl">
+            Kabinet: Reformasi
+          </a>
+        </div>
         <div className="flex-row space-y-4 sm:justify-center sm:space-y-0">
           <a className="inline-flex items-center justify-center rounded-lg bg-blue-700 px-5 py-3 text-center font-geotricaRegular text-3xl text-white hover:cursor-pointer hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
             Kenapa Reformasi?

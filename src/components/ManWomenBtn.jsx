@@ -2,20 +2,6 @@ export default function ManWomenBtn() {
   return (
     <div className="absolute bottom-4 right-4 inline-flex rounded-lg border border-gray-100 bg-transparent p-1 dark:border-gray-800 dark:bg-gray-900 dark:text-white">
       <button className="inline-flex items-center gap-2 rounded-md bg-blue-700 px-4 py-2 text-sm text-white shadow-sm focus:relative dark:bg-gray-800">
-        {/* <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth="1.5"
-          stroke="currentColor"
-          className="size-4"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
-          />
-        </svg> */}
         <svg fill="currentColor" viewBox="0 0 345.6 345.6" className="size-4">
           <path
             d="M336.843,8.927c-5.959-5.976-14.148-9.174-22.594-8.787L211.774,4.758c-16.551,0.746-29.365,14.769-28.619,31.32
@@ -32,25 +18,6 @@ export default function ManWomenBtn() {
       </button>
 
       <button className="inline-flex items-center gap-2 rounded-md px-4 py-2 text-sm text-white hover:text-gray-200 focus:relative dark:text-gray-400 dark:hover:text-gray-200">
-        {/* <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth="1.5"
-          stroke="currentColor"
-          className="size-4"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"
-          />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-          />
-        </svg> */}
         <svg fill="currentColor" viewBox="0 0 40.249 40.249" className="size-5">
           <path
             d="M26.875,27.999h-4.25v-4.646c5.315-1.15,9.312-5.887,9.312-11.542C31.937,5.298,26.638,0,20.125,0
