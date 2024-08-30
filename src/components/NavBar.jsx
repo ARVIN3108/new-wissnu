@@ -124,19 +124,19 @@ export default function NavBar() {
               </button>
               <div
                 id="dropdownNavbar"
-                className="z-10 hidden w-52 divide-y divide-gray-100 rounded-lg bg-white font-normal shadow"
+                className="z-10 hidden w-52 divide-y divide-gray-100 rounded-lg bg-black/40 font-normal shadow"
               >
                 <ul
-                  className="py-2 text-sm text-gray-700"
+                  className="text-sm text-white"
                   aria-labelledby="dropdownLargeButton"
                 >
                   <li aria-labelledby="dropdownNavbarLink">
                     <button
-                      id="menkoAkademikDropdownButton"
-                      data-dropdown-toggle="menkoAkademikDropdown"
+                      id="menko1DropdownButton"
+                      data-dropdown-toggle="menko1Dropdown"
                       data-dropdown-placement="right-start"
                       type="button"
-                      className="flex w-full items-center justify-between px-4 py-2 hover:bg-gray-100"
+                      className="flex w-full items-center justify-between rounded rounded-t-lg px-4 py-[0.6rem] hover:bg-blue-700"
                       onClick={() => setMenko1Dropdown(!isMenko1Dropdown)}
                     >
                       Menko Akademik
@@ -157,17 +157,17 @@ export default function NavBar() {
                       </svg>
                     </button>
                     <div
-                      id="menkoAkademikDropdown"
-                      className="z-10 hidden w-44 divide-y divide-gray-100 rounded-lg bg-white shadow"
+                      id="menko1Dropdown"
+                      className="z-10 hidden w-44 divide-y divide-gray-100 rounded-lg bg-black/40 shadow"
                     >
                       <ul
-                        className="py-2 text-sm text-gray-700"
+                        className="text-sm text-white"
                         aria-labelledby="doubleDropdownButton"
                       >
                         <li>
                           <a
                             href="#"
-                            className="block px-4 py-2 hover:bg-gray-100"
+                            className="block rounded rounded-t-lg px-4 py-[0.6rem] hover:bg-blue-700"
                           >
                             Kemenderistek
                           </a>
@@ -175,7 +175,7 @@ export default function NavBar() {
                         <li>
                           <a
                             href="#"
-                            className="block px-4 py-2 hover:bg-gray-100"
+                            className="block rounded px-4 py-[0.6rem] hover:bg-blue-700"
                           >
                             Kemenkominfo
                           </a>
@@ -183,7 +183,7 @@ export default function NavBar() {
                         <li>
                           <a
                             href="#"
-                            className="block px-4 py-2 hover:bg-gray-100"
+                            className="block rounded rounded-b-lg px-4 py-[0.6rem] hover:bg-blue-700"
                           >
                             Kemenkes
                           </a>
@@ -193,11 +193,11 @@ export default function NavBar() {
                   </li>
                   <li aria-labelledby="dropdownNavbarLink">
                     <button
-                      id="menkoPengembanganDropdownButton"
-                      data-dropdown-toggle="menkoPengambanganDropdown"
+                      id="menko2DropdownButton"
+                      data-dropdown-toggle="menko2Dropdown"
                       data-dropdown-placement="right-start"
                       type="button"
-                      className="flex w-full items-center justify-between px-4 py-2 hover:bg-gray-100"
+                      className="flex w-full items-center justify-between rounded px-4 py-[0.6rem] hover:bg-blue-700"
                       onClick={() => setMenko2Dropdown(!isMenko2Dropdown)}
                     >
                       Menko Pengembangan
@@ -218,19 +218,43 @@ export default function NavBar() {
                       </svg>
                     </button>
                     <div
-                      id="menkoPengambanganDropdown"
-                      className="z-10 hidden w-44 divide-y divide-gray-100 rounded-lg bg-white shadow"
+                      id="menko2Dropdown"
+                      className="z-10 hidden w-44 divide-y divide-gray-100 rounded-lg bg-black/40 shadow"
                     >
                       <ul
-                        className="py-2 text-sm text-gray-700"
+                        className="text-sm text-white"
                         aria-labelledby="doubleDropdownButton"
                       >
                         <li>
                           <a
                             href="#"
-                            className="block px-4 py-2 hover:bg-gray-100"
+                            className="block rounded rounded-t-lg px-4 py-[0.6rem] hover:bg-blue-700"
                           >
                             Kemenraga
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block rounded px-4 py-[0.6rem] hover:bg-blue-700"
+                          >
+                            Kemenkap
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block rounded px-4 py-[0.6rem] hover:bg-blue-700"
+                          >
+                            Kemenkoptri
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block rounded rounded-b-lg px-4 py-[0.6rem] hover:bg-blue-700"
+                          >
+                            Kemencling
                           </a>
                         </li>
                       </ul>
@@ -242,10 +266,10 @@ export default function NavBar() {
                       data-dropdown-toggle="menko3Dropdown"
                       data-dropdown-placement="right-start"
                       type="button"
-                      className="flex w-full items-center justify-between px-4 py-2 hover:bg-gray-100"
+                      className="flex w-full items-center justify-between rounded rounded-b-lg px-4 py-[0.6rem] hover:bg-blue-700"
                       onClick={() => setMenko3Dropdown(!isMenko3Dropdown)}
                     >
-                      Menko 3
+                      Menko Pemberdayaan
                       <svg
                         className={`ms-2.5 h-2.5 w-2.5 transition-transform duration-300 ${isMenko3Dropdown ? "rotate-90" : "-rotate-90"}`}
                         aria-hidden="true"
@@ -264,16 +288,40 @@ export default function NavBar() {
                     </button>
                     <div
                       id="menko3Dropdown"
-                      className="z-10 hidden w-44 divide-y divide-gray-100 rounded-lg bg-white shadow"
+                      className="z-10 hidden w-44 divide-y divide-gray-100 rounded-lg bg-black/40 shadow"
                     >
                       <ul
-                        className="py-2 text-sm text-gray-700"
+                        className="text-sm text-white"
                         aria-labelledby="doubleDropdownButton"
                       >
                         <li>
                           <a
                             href="#"
-                            className="block px-4 py-2 hover:bg-gray-100"
+                            className="block rounded rounded-t-lg px-4 py-[0.6rem] hover:bg-blue-700"
+                          >
+                            Kemenkasi
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block rounded px-4 py-[0.6rem] hover:bg-blue-700"
+                          >
+                            Kemenmastik
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block rounded px-4 py-[0.6rem] hover:bg-blue-700"
+                          >
+                            Kemensekreat
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block rounded rounded-b-lg px-4 py-[0.6rem] hover:bg-blue-700"
                           >
                             Kemenbud
                           </a>
