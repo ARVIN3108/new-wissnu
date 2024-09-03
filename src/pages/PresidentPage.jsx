@@ -13,29 +13,25 @@ export default function PresidentPage() {
           Presiden & Wakil Presiden
         </h1>
       </div>
-      <div className="couple grid grid-cols-1 font-geotricaRegular lg:grid-cols-2">
+      <div className="grid grid-cols-1 font-geotricaRegular lg:grid-cols-2">
         <div className="grid grid-cols-12 items-center text-white">
           <div className="col-span-8 pr-8 text-right lg:pr-16">
             <h3 className="text-4xl">Anies Sya{"'"}roni</h3>
             <h4 className="text-xl">Presiden WIsSNU</h4>
-            <p>Asal: Bali</p>
-            <p>Mafa: Ipsum</p>
-            <p>Mifa: Afia</p>
+            <p>Asal: Denpasar, Bali</p>
           </div>
           <div className="col-span-4">
-            <img src={aniesPNG} alt="ARVIN3108" className="h-auto w-full" />
+            <img src={aniesPNG} alt="Anies" className="h-auto w-full" />
           </div>
         </div>
         <div className="ml-auto grid grid-cols-12 items-center text-white">
           <div className="col-span-4">
-            <img src={fasyaPNG} alt="Vinia" className="h-auto w-3/4" />
+            <img src={fasyaPNG} alt="Fasya" className="h-auto w-3/4" />
           </div>
           <div className="col-span-8">
             <h3 className="text-4xl">Fasya Arafat</h3>
             <h4 className="text-xl">Wakil Presiden WIsSNU</h4>
-            <p>Asal: Lorem</p>
-            <p>Mafa: Ipsum</p>
-            <p>Mifa: Afia</p>
+            <p>Asal: Blora, Jawa Tengah</p>
           </div>
         </div>
       </div>
