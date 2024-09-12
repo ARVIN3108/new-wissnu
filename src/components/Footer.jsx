@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="relative mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24">
         <div className="absolute end-4 top-4 sm:end-6 sm:top-6 lg:end-8 lg:top-8">
           <a
-            className="inline-block rounded-full bg-blue-700 p-2 text-white shadow transition hover:bg-blue-800 sm:p-3 lg:p-4"
+            className="inline-block rounded-full bg-yellow-300 p-2 text-white shadow transition hover:bg-yellow-500 sm:p-3 lg:p-4"
             href="#"
           >
             <span className="sr-only">Back to top</span>
@@ -26,14 +26,18 @@ export default function Footer() {
 
         <div className="lg:flex lg:items-end lg:justify-between">
           <div>
-            <div className="flex justify-center text-teal-600 lg:justify-start">
-              <img src="./wissnu-300.png" className="h-11" alt="WisSNU Logo" />
+            <div className="flex justify-center lg:justify-start">
+              <img
+                src="./wissnu-logo.webp"
+                className="h-11"
+                alt="WIsSNU Logo"
+              />
               <span className="self-center whitespace-nowrap px-3 font-geotricaBold text-2xl font-semibold text-white">
                 WIsSNU
               </span>
             </div>
 
-            <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-200 lg:text-left">
+            <p className="poppins-regular mx-auto mt-6 max-w-md text-center leading-relaxed tracking-tight text-gray-200 lg:text-left">
               WIsSNU merupakan organisasi intra sekolah, yaitu organisasi
               gabungan antara OSIS dan organisasi pondok. Penggabungan OSIS dan
               organisasi pondok ini bermula dari kesamaan fungsi, yaitu sebagai

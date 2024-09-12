@@ -31,7 +31,7 @@ export default function NavBar() {
           onClick={() => (window.location.href = "#")}
           className="flex items-center space-x-3 hover:cursor-pointer rtl:space-x-reverse"
         >
-          <img src="./wissnu-300.png" className="h-11" alt="WisSNU Logo" />
+          <img src="./wissnu-logo.webp" className="h-11" alt="WIsSNU Logo" />
           <span className="self-center whitespace-nowrap font-geotricaBold text-2xl font-semibold text-white">
             WIsSNU
           </span>
@@ -39,9 +39,7 @@ export default function NavBar() {
         <div className="flex space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse">
           <button
             type="button"
-            onClick={() =>
-              (window.location.href = "https://admisi.mbi-au.sch.id")
-            }
+            onClick={() => (window.location.href = "https://mbi-au.sch.id")}
             className="rounded-lg bg-blue-700 px-4 py-2 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
             Sekolah Kami
