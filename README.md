@@ -1,4 +1,4 @@
-<p align="center"><img alt="WIsSNU Logo" height="150" src="public/wissnu-300.png"></p>
+<p align="center"><img alt="WIsSNU Logo" height="150" src="public/wissnu-logo.webp"></p>
 <h1 align="center">New WIsSNU Official Website from (me)</h1>
 <p align="center">Currently still under hot development stage.<p>
 
