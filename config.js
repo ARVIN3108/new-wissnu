@@ -1,6 +1,4 @@
 /* eslint-disable no-undef */
 
 export const base =
-  process.env.NODE_ENV === "production"
-    ? "/${{ github.event.repository.name }}/"
-    : "/";
+  process.env.NODE_ENV === "production" ? "/new-wissnu/" : "/";
