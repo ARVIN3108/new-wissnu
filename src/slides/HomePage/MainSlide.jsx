@@ -1,4 +1,4 @@
-export default function HomePage() {
+export default function MainSlide() {
   return (
     <div className="relative mt-[-4.73rem] min-h-screen bg-no-repeat align-middle before:absolute before:left-0 before:top-0 before:z-[-1] before:h-full before:w-full before:bg-gray-700 before:bg-[url(assets/imgs/backgrounds/home.jpg)] before:bg-cover before:bg-center before:bg-blend-multiply">
       <div className="mx-auto max-w-screen-xl px-4 py-28 text-center lg:py-36">

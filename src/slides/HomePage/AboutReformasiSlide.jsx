@@ -1,13 +1,13 @@
-import wissnuUpscaled from "../../assets/imgs/logo/wissnu-logo-upscaled-transparent-shadow.png";
-export default function AboutWIsSNUSlide() {
+import wissnuUpscaled from "../assets/imgs/logo/wissnu-logo-upscaled-transparent-shadow.png";
+export default function AboutReformasiSlide() {
   return (
     <div
-      id="about-wissnu"
+      id="about-reformasi"
       className="relative before:absolute before:left-0 before:top-0 before:z-[-1] before:h-full before:w-full before:bg-gray-600 before:bg-[url(assets/imgs/backgrounds/aboutwissnu.jpg)] before:bg-cover before:bg-center before:bg-no-repeat before:bg-blend-multiply"
     >
       <section className="poppins-regular mx-auto max-w-6xl px-6 py-12">
         <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
-          <div className="order-1 flex justify-center md:order-2">
+          <div className="order-1 flex justify-center">
             <div className="relative">
               <img
                 className="w-72 md:w-80 lg:w-96"
@@ -17,7 +17,7 @@ export default function AboutWIsSNUSlide() {
             </div>
           </div>
 
-          <div className="order-2 md:order-1">
+          <div className="order-2">
             <h2 className="mb-4 text-center font-geotricaBold text-4xl font-bold text-white md:text-left">
               Apa Itu WIsSNU?
             </h2>
