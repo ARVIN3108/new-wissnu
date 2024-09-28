@@ -5,8 +5,15 @@ export default function CustomNavLink({ to = "", children, ...props }) {
   const location = useLocation();
 
   const handleClick = () => {
-    if (!location.pathname.endsWith("/")) location.pathname += "/";
-    if (location.pathname == base + to)
+    const normalizedPath = location.pathname.endsWith("/")
+      ? location.pathname
+      : location.pathname + "/";
+
+    const targetPath = `${base}${to}`.endsWith("/")
+      ? `${base}${to}`
+      : `${base}${to}/`;
+
+    if (normalizedPath === targetPath)
       window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
