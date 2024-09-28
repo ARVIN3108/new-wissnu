@@ -2,7 +2,7 @@ import ManWomenBtn from "../../components/ManWomenBtn";
 import aniesPNG from "../../assets/imgs/people/anies.png";
 import fasyaPNG from "../../assets/imgs/people/fasya.png";
 
-export default function PresidentPage() {
+export default function PresidentSlide() {
   return (
     <div className="relative min-h-screen bg-transparent bg-no-repeat before:absolute before:left-0 before:top-0 before:z-[-1] before:h-full before:w-full before:bg-gray-600 before:bg-[url(assets/imgs/backgrounds/president.jpg)] before:bg-cover before:bg-center before:bg-blend-multiply">
       <section className="mx-auto max-w-6xl px-6 py-12">
