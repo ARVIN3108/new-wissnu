@@ -1,16 +1,25 @@
+import {
+  Route,
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+} from "react-router-dom";
+import { base } from "../config";
+import MainLayout from "./layouts/MainLayout";
+
 import HomePage from "./pages/HomePage";
-import NavBar from "./components/NavBar";
-import Footer from "./components/Footer";
-import PresidentPage from "./pages/PresidentPage";
-import AboutWIsSNUPage from "./pages/AboutWIsSNUPage";
+import NewsPage from "./pages/NewsPage";
 export default function App() {
   return (
-    <>
-      <NavBar />
-      <HomePage />
-      <AboutWIsSNUPage />
-      <PresidentPage />
-      <Footer />
-    </>
+    <RouterProvider
+      router={createBrowserRouter(
+        createRoutesFromElements(
+          <Route path={base} element={<MainLayout />}>
+            <Route index element={<HomePage />} />
+            <Route path={base + "news"} element={<NewsPage />} />
+          </Route>,
+        ),
+      )}
+    />
   );
 }

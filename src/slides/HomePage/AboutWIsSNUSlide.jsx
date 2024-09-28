@@ -1,4 +1,4 @@
-import wissnuUpscaled from "../assets/imgs/logo/wissnu-logo-upscaled-transparent-shadow.png";
+import wissnuUpscaled from "../../assets/imgs/logo/wissnu-logo-upscaled-transparent-shadow.png";
 export default function AboutWIsSNUPage() {
   return (
     <div

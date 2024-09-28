@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import CustomNavLink from "./CustomNavLink";
 export default function NavBar() {
   const [isMainDropdown, setMainDropdown] = useState(false);
   const [isMenko1Dropdown, setMenko1Dropdown] = useState(false);
@@ -27,15 +28,12 @@ export default function NavBar() {
       id="main-navbar"
     >
       <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
-        <a
-          onClick={() => (window.location.href = "#")}
-          className="flex items-center space-x-3 hover:cursor-pointer rtl:space-x-reverse"
-        >
+        <CustomNavLink className="flex items-center space-x-3 hover:cursor-pointer rtl:space-x-reverse">
           <img src="./wissnu-logo.webp" className="h-11" alt="WIsSNU Logo" />
           <span className="self-center whitespace-nowrap font-geotricaBold text-2xl font-semibold text-white">
             WIsSNU
           </span>
-        </a>
+        </CustomNavLink>
         <div className="flex space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse">
           <button
             type="button"
@@ -81,12 +79,9 @@ export default function NavBar() {
         >
           <ul className="mt-4 flex flex-col rounded-lg border-2 border-gray-100 bg-black/25 p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-transparent md:p-0 rtl:space-x-reverse">
             <li>
-              <a
-                className="block rounded px-3 py-2 font-geotricaRegular text-[1.05rem] text-white hover:cursor-pointer hover:bg-blue-700 md:p-0 md:hover:border-none md:hover:bg-transparent md:hover:text-blue-500"
-                onClick={() => (window.location.href = "#")}
-              >
+              <CustomNavLink className="block rounded px-3 py-2 font-geotricaRegular text-[1.05rem] text-white hover:cursor-pointer hover:bg-blue-700 md:p-0 md:hover:border-none md:hover:bg-transparent md:hover:text-blue-500">
                 Beranda
-              </a>
+              </CustomNavLink>
             </li>
             <li>
               <a className="block rounded px-3 py-2 font-geotricaRegular text-[1.05rem] text-white hover:cursor-pointer hover:bg-blue-700 md:p-0 md:hover:border-none md:hover:bg-transparent md:hover:text-blue-500">
@@ -94,9 +89,12 @@ export default function NavBar() {
               </a>
             </li>
             <li>
-              <a className="block rounded px-3 py-2 font-geotricaRegular text-[1.05rem] text-white hover:cursor-pointer hover:bg-blue-700 md:p-0 md:hover:border-none md:hover:bg-transparent md:hover:text-blue-500">
+              <CustomNavLink
+                to={"news"}
+                className="block rounded px-3 py-2 font-geotricaRegular text-[1.05rem] text-white hover:cursor-pointer hover:bg-blue-700 md:p-0 md:hover:border-none md:hover:bg-transparent md:hover:text-blue-500"
+              >
                 Berita
-              </a>
+              </CustomNavLink>
             </li>
             <li>
               <button
